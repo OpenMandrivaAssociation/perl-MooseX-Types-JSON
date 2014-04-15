@@ -1,11 +1,11 @@
-%define upstream_name    MooseX-Types-JSON
-%define upstream_version 0.02
+%define upstream_name    MooseX-Types-JSON%define upstream_version 0.03
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	JSON datatype for Moose
+
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
@@ -15,6 +15,7 @@ BuildRequires:	perl-devel
 BuildRequires:	perl(JSON::XS)
 BuildRequires:	perl(Moose)
 BuildRequires:	perl(MooseX::Types)
+BuildRequires:  perl(namespace::autoclean)
 BuildArch:	noarch
 
 %description
@@ -39,15 +40,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 
-%changelog
-* Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 0.20.0-2mdv2011.0
-+ Revision: 655138
-- rebuild for updated spec-helper
-
-* Tue Feb 16 2010 Jérôme Quelin <jquelin@mandriva.org> 0.20.0-1mdv2011.0
-+ Revision: 506652
-- import perl-MooseX-Types-JSON
-
-
-* Tue Feb 16 2010 cpan2dist 0.02-1mdv
-- initial mdv release, generated with cpan2dist
