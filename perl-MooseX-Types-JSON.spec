@@ -1,16 +1,14 @@
 %define upstream_name    MooseX-Types-JSON
-%define upstream_version 1.01
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.01
+Release:	2
 
 Summary:	JSON datatype for Moose
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/uperl/MooseX-Types-JSON
-Source0:	https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/MooseX-Types-JSON-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/MooseX-Types-JSON-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -24,7 +22,7 @@ BuildArch:	noarch
 JSON datatype for Moose.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
